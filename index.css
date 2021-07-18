@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:courier,arial,helvetica;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
+}
+
+canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+    border: #fff;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.info{
+    position: absolute;
+    top: 100%;
+}
