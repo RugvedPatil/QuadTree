@@ -4,23 +4,35 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="index.css">
 
 	<title>Quadtree</title>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script type="text/javascript" src="./js/quadtree.js"></script>
 	<script type="text/javascript" src="./js/sketch.js"></script>
 	<script type="text/javascript" src="./js/particles.js"></script>
+	<link rel="stylesheet" href="index.css">
+
 </head>
 <body>
-	<h1>Quadtree Algorithm</h1>
-	<div class="info">
-		Quadtrees are trees used to efficiently store data of points on a two-dimensional space. In this tree, each node has at most four children.
-		We can construct a quadtree from a two-dimensional area using the following steps:
-		Divide the current two dimensional space into four boxes.
-		If a box contains one or more points in it, create a child object, storing in it the two dimensional space of the box
-		If a box does not contain any points, do not create a child for it
-		Recurse for each of the children.
-	</div>
+	<div class="container-fluid">
+        <h1>Quadtree Algorithm</h1>
+        <div id="canvas_div"></div>
+        <div id ="frame_rate"></div>
+        <div class="info">
+            Quadtrees are trees used to efficiently store data of points on a two-dimensional space. In this tree, each node has at most four children.
+            We can construct a quadtree from a two-dimensional area using the following steps:
+            Divide the current two dimensional space into four boxes.
+            If a box contains one or more points in it, create a child object, storing in it the two dimensional space of the box
+            If a box does not contain any points, do not create a child for it
+            Recurse for each of the children.
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>

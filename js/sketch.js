@@ -1,26 +1,31 @@
 let particles = []
 let fr;
 
+
 function setup()
 {
-    canvas.width = window.innerWidth * 0.7 ;
-    canvas.height = window.innerHeight * 0.8;
-    createCanvas(canvas.width,canvas.height);
+    const canvas_div = document.getElementById("canvas_div");
+    const frameRate_div = document.getElementById("frame_rate");
+    const canvas_width = canvas_div.clientWidth;
+    const canvas = createCanvas(canvas_width,580);
+
+    canvas.parent(canvas_div);
+
     fr = createP('');
+    fr.parent(frameRate_div);
 
     for(let i=0; i<100; i++)
     {
         particles[i] = new Particle(random(width),random(height));
     }
-
 }
 
 function draw()
 {
     background(0);
 
-    let boundary = new Rectangle(300,200,600,400);
-    let qtree = new QuadTree(boundary, 4);
+    let boundary = new Rectangle(canvas.width,canvas.height,canvas.width,canvas.height);
+    let qtree = new QuadTree(boundary, 10);
     fr.html('frame rate = '+ floor(frameRate()));
 
     for(let p of particles)
@@ -46,5 +51,5 @@ function draw()
             }
         }
     }
-
+    frameRate(120);
 }

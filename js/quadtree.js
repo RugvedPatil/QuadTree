@@ -125,17 +125,17 @@ class QuadTree
                 return true;
             }  
             else if(this.northwest.insert(point))
-                {
-                    return true;
-                }
+            {
+                return true;
+            }
             else if(this.southeast.insert(point))
-                {
-                    return true
-                }
+            {
+                return true
+            }
             else if(this.southwest.insert(point))
-                {
-                    return true;
-                }
+            {
+                return true;
+            }
         }
     }
 
@@ -172,10 +172,10 @@ class QuadTree
     show()
     {
         stroke(255);
-        strokeWeight(1);
+        strokeWeight(0.5);
         noFill();
         rectMode(CENTER);
-        rect(this.boundary.x, this.boundary.y, this.boundary.w * 2, this.boundary.h *2);
+        rect(this.boundary.x, this.boundary.y, this.boundary.w * 2, this.boundary.h *2); // grid
         
         if(this.divided)
         {
@@ -186,7 +186,8 @@ class QuadTree
         }
         for(let p of this.points)
         {
-            strokeWeight(4);
+            stroke(50,205,50);
+            strokeWeight(5);
             point(p.x, p.y);
         }
     }

@@ -10,8 +10,8 @@ class Particle
 
     move()
     {
-        this.x += random(-1,1);
-        this.y += random(-1,1);
+        this.x += random(-5,5);
+        this.y += random(-5,5);
     }
 
     intersects(other)
@@ -27,14 +27,15 @@ class Particle
 
     render()
     {
-        noStroke();
         if (this.highlight)
         {
-            fill(50,205,50);
+            noStroke();
+            fill(225);
         }
         else
         {
-            fill(100);
+            noStroke();
+            fill(0);
         }
         ellipse(this.x,this.y,this.r*2)
     }
